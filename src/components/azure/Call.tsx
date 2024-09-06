@@ -25,6 +25,8 @@ export const Call = (props: CallProps): JSX.Element => {
         });
         adapter.onStateChange((state: CallAdapterState) => {
 
+            console.log(convertPageStateToString(state));
+
             if (state?.call?.id && callIdRef.current !== state?.call?.id) {
                 callIdRef.current = state?.call?.id;
                 console.log(`Call Id: ${callIdRef.current}`);

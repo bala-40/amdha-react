@@ -1,18 +1,16 @@
 import { CommunicationUserIdentifier, MicrosoftTeamsUserIdentifier } from '@azure/communication-common';
-
 import { CallAdapterLocator, StartCallIdentifier } from '@azure/communication-react';
-import { useEffect, useState } from 'react';
-import { isLandscape, isOnIphoneAndNotSafari, useIsMobile } from '../../utils/screenSizeUtils';
+import { useState } from 'react';
 import { Call } from '../azure/Call';
 
-interface IJoinMeetingProps {
+interface IAzureJoinMeetingProps {
     participantIdentity: string
     participantToken: string
     meetingId: string
     participantName: string
 }
 
-export default function JoinMeeting(props: IJoinMeetingProps) {
+export default function AzureJoinMeeting(props: IAzureJoinMeetingProps) {
 
     const [displayName, setDisplayName] = useState(props.participantName);
     const [token, setToken] = useState<string>(props.participantToken);
@@ -20,11 +18,6 @@ export default function JoinMeeting(props: IJoinMeetingProps) {
     const [callLocator, setCallLocator] = useState<CallAdapterLocator>({ roomId: props.meetingId });
     const [targetCallees, setTargetCallees] = useState<StartCallIdentifier[] | undefined>(undefined);
     const [isTeamsCall, setIsTeamsCall] = useState<boolean>(false);
-
-    // const supportedBrowser = !isOnIphoneAndNotSafari();
-    // if (!supportedBrowser) {
-    //   return <UnsupportedBrowserPage />;
-    // }
 
     return (
         <Call

@@ -1,12 +1,10 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import _ from "lodash";
-import { CommunicationUserIdentifier, MicrosoftTeamsUserIdentifier } from "@azure/communication-common";
-import { CallAdapterLocator, StartCallIdentifier } from "@azure/communication-react";
-import JoinMeeting from "../components/meeting/JoinMeeting";
+import AzureJoinMeeting from "../components/meeting/AzureJoinMeeting";
 import { Spinner } from "@fluentui/react";
 
-export default function Meeting() {
+export default function AzureMeetingPage() {
 
     const [getParams] = useSearchParams();
 
@@ -32,7 +30,7 @@ export default function Meeting() {
         <div className="customWrapper">
             {
                 isReady ?
-                    (<JoinMeeting
+                    (<AzureJoinMeeting
                         meetingId={meetingId}
                         participantIdentity={participantIdentity}
                         participantName={participantName}

@@ -6,6 +6,8 @@
     "@azure/communication-common": "^2.3.1",
     "@azure/communication-react": "^1.18.1",
     "@azure/communication-rooms": "^1.1.0",
+    "@dytesdk/react-ui-kit": "^2.0.1",
+    "@dytesdk/react-web-core": "^2.0.6",
     "@fluentui/react": "^8.120.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

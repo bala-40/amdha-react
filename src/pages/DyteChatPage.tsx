@@ -1,5 +1,4 @@
-export default function Chat(){
-    debugger
+export default function DyteChatPage(){
     return (
         <div>
             Chat
