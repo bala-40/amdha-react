@@ -3,6 +3,11 @@ const URLS = {
     APP_BASE: process.env.REACT_APP_BASE || "/app"
 }
 
+const GENERAL ={
+    CHANNEL_NAME:"AMDHA_COMMUNICATION"
+}
+
 export const Constants = {
-    URLS
+    URLS,
+    GENERAL
 };

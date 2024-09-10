@@ -19,7 +19,6 @@ export default function DyteMeetingPage(){
                 video : true
             }
         });
-
     }, []);
 
     return (
